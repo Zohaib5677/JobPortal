@@ -1,9 +1,14 @@
 {
   "name": "jobportal",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,8 +23,12 @@
   },
   "homepage": "https://github.com/Zohaib5677/JobPortal#readme",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^26.4.1",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }
