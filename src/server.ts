@@ -1,7 +1,7 @@
 import { buildApp }from "./app.js";
-
+import { config } from './shared/config.js';
 const app = buildApp();
 
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
+app.listen(config.PORT, () => {
+  console.log(`Server running at http://localhost:${config.PORT}`);
 });
